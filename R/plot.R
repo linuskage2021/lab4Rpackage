@@ -8,6 +8,7 @@
 #'
 #' @examples
 plot.linreg = function(object){
+  library(ggplot2)
   data_package<-data.frame(fits=object[["fits"]], res=object[["residuals"]], standardized_residual = sqrt(abs(object[["residuals"]]/sd(object[["residuals"]]))))
 
   p1<-ggplot2::ggplot(data_package,aes(x=object[["fits"]], y=object[["residuals"]]))+

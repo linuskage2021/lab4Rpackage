@@ -6,7 +6,7 @@
 #' @export
 #'
 #' @examples
-summary.linreg <- function(object){
+summary.linreg <- function(object, ...){
 
   placehold_df <- data.frame(Estimate = object[["beta"]],
                              Std_Error = object[["error_betas"]],

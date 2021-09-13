@@ -2,11 +2,11 @@
 #'
 #' @param object
 #'
-#' @return
+#' @return Vector with residuals
 #' @export
 #'
-#' @examples
-resid.linreg <- function(object){
+
+residuals.linreg <- function(object){
 
   return(object[["residuals"]])
 

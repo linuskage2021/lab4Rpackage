@@ -4,7 +4,7 @@
 \alias{summary.linreg}
 \title{Summary printout of the fitted regerssionmodel}
 \usage{
-\method{summary}{linreg}(object)
+\method{summary}{linreg}(object, ...)
 }
 \arguments{
 \item{object}{}
