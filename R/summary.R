@@ -33,7 +33,7 @@ summary.linreg <- function(object){
   print(placehold_df)
 
   cat("\n")
-  cat("Residual standard error: ", sqrt(object[["res_var"]]), "on", object[["df"]], "degrees of freedom \n")
+  cat("Residual standard error:", sqrt(object[["res_var"]]), "on", object[["df"]], "degrees of freedom \n")
 
 
 }

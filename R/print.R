@@ -9,9 +9,9 @@
 print.linreg <- function(object){
 
 
-  cat("Call: \n", "linreg(formula =",
+  cat("Call: \n", "linreg(formula = ",
       as.character(object[["formula"]]),
-      "data =", as.character(object[["data"]]), ")", "\n", "\n")
+      ", data = ", as.character(object[["data"]]), ")", "\n", "\n", sep = "")
 
 
   cat("Coefficients: \n")
