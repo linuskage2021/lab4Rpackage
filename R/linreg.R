@@ -1,3 +1,14 @@
+
+
+#' Linear regression with QR
+#'
+#' @param formula
+#' @param data
+#'
+#' @return
+#' @export
+#'
+#' @examples
 linreg <- function(formula, data){
 
 
@@ -11,7 +22,6 @@ linreg <- function(formula, data){
 
 
   beta_vec <- solve(R)%*%t(Q)%*%y
-  print(beta_vec)
 
 
   fitted_values <- X%*%beta_vec
@@ -22,7 +32,6 @@ linreg <- function(formula, data){
   residuals <- y - fitted_values
 
   residual_variance <- as.numeric((t(residuals) %*% residuals)/df)
-  #dim(residual_variance)
 
   error_betas <- sqrt(diag(residual_variance*(solve(R) %*% t(solve(R)))))
 
