@@ -4,7 +4,7 @@
 \alias{pred.linreg}
 \title{Pred}
 \usage{
-\method{pred}{linreg}(object)
+\method{pred}{linreg}(x)
 }
 \arguments{
 \item{object}{}

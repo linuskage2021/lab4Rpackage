@@ -1,20 +1,20 @@
 #' Print method for linreg classes
 #'
-#' @param object
+#' @param x
 #'
 #' @return
 #' @export
 #'
 #' @examples
-print.linreg <- function(object){
+print.linreg <- function(x, ...){
 
 
   cat("Call: \n", "linreg(formula = ",
-      as.character(object[["formula"]]),
-      ", data = ", as.character(object[["data"]]), ")", "\n", "\n", sep = "")
+      as.character(x[["formula"]]),
+      ", data = ", as.character(x[["data"]]), ")", "\n", "\n", sep = "")
 
 
   cat("Coefficients: \n")
-  print(object[["beta"]])
+  print(x[["beta"]])
 
 }

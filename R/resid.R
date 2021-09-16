@@ -6,7 +6,7 @@
 #' @export
 #'
 
-residuals.linreg <- function(object){
+residuals.linreg <- function(object, ...){
 
   return(object[["residuals"]])
 

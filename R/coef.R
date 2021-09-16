@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-coef.linreg <- function(object){
+coef.linreg <- function(object, ...){
 
 
   return(object[["beta"]])

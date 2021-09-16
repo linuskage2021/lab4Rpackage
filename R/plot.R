@@ -7,20 +7,20 @@
 #' @export
 #'
 #' @examples
-plot.linreg = function(object){
+plot.linreg = function(x, ...){
 
-  data_package<-data.frame(fits=object[["fits"]],
-                           res=object[["residuals"]],
-                           standardized_residual = sqrt(abs(object[["residuals"]]/stats::sd(object[["residuals"]]))))
+  data_package<-data.frame(fits=x[["fits"]],
+                           res=x[["residuals"]],
+                           standardized_residual = sqrt(abs(x[["residuals"]]/stats::sd(x[["residuals"]]))))
 
-  p1<-ggplot2::ggplot(data_package,ggplot2::aes(x=object[["fits"]], y=object[["residuals"]])) +
+  p1<-ggplot2::ggplot(data_package,ggplot2::aes(x=x[["fits"]], y=x[["residuals"]])) +
     ggplot2::geom_point(shape=21) +
     ggplot2::ggtitle("Residual vs Fitted") +
     ggplot2::xlab(paste("Fitted values \n lm(Petal.Length ~ Species)")) +
     ggplot2::ylab("Residuals")
 
-  p2<-ggplot2::ggplot(data_package,ggplot2::aes(x=object[["fits"]],
-                                       y=sqrt(abs(object[["residuals"]]/stats::sd(object[["residuals"]]))))) +
+  p2<-ggplot2::ggplot(data_package,ggplot2::aes(x=x[["fits"]],
+                                       y=sqrt(abs(x[["residuals"]]/stats::sd(x[["residuals"]]))))) +
     ggplot2::geom_point(shape=21) +
     ggplot2::ggtitle("Scale - Location") +
     ggplot2::xlab(paste("Fitted values \n lm(Petal.Length ~ Species)"))+

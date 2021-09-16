@@ -4,10 +4,10 @@
 \alias{print.linreg}
 \title{Print method for linreg classes}
 \usage{
-\method{print}{linreg}(object)
+\method{print}{linreg}(x, ...)
 }
 \arguments{
-\item{object}{}
+\item{x}{}
 }
 \value{
 

@@ -5,7 +5,7 @@
 \title{Show two scatter plots.The first one fitted values against Residuals.
 The second scatter plot show square root of standardized residuals against fitted values}
 \usage{
-\method{plot}{linreg}(object)
+\method{plot}{linreg}(x, ...)
 }
 \arguments{
 \item{object}{}

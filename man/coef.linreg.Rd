@@ -4,7 +4,7 @@
 \alias{coef.linreg}
 \title{Coefficeients of the estimated regression modell}
 \usage{
-\method{coef}{linreg}(object)
+\method{coef}{linreg}(object, ...)
 }
 \arguments{
 \item{object}{}

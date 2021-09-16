@@ -4,7 +4,7 @@
 \alias{residuals.linreg}
 \title{Residuals of a linereg class model}
 \usage{
-\method{residuals}{linreg}(object)
+\method{residuals}{linreg}(object, ...)
 }
 \arguments{
 \item{object}{}

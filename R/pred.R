@@ -6,8 +6,8 @@
 #' @export
 #'
 #' @examples
-pred.linreg <- function(object){
+pred.linreg <- function(x){
 
-  return(object[["fits"]])
+  return(x[["fits"]])
 
 }
