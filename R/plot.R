@@ -32,7 +32,8 @@ plot.linreg = function(x, ...){
     ggplot2::xlab(paste("Fitted values \n lm(", x[["formula"]], ")", sep = "")) +
     ggplot2::ylab("Residuals") +
     ggplot2::geom_text(data = outlier_df, ggplot2::aes(x = fits, y = res, label = rownames(outlier_df)), hjust = -0.4, vjust = 0) +
-    ggplot2::geom_point(data = outlier_df, ggplot2::aes(x = fits, y= res)) + ggplot2::theme_bw()
+    ggplot2::geom_point(data = outlier_df, ggplot2::aes(x = fits, y= res), shape = 21) +
+    ggplot2::theme_bw()
 
 
   p2<-ggplot2::ggplot(data_package,ggplot2::aes(x=fits,
@@ -42,7 +43,8 @@ plot.linreg = function(x, ...){
     ggplot2::xlab(paste("Fitted values \n lm(", x[["formula"]], ")", sep = ""))+
     ggplot2::ylab("|Standaridized residuals|") +
     ggplot2::geom_text(data = outlier_df, ggplot2::aes(x = fits, y = standardized_residual, label = rownames(outlier_df)), hjust = -0.4, vjust = 0) +
-    ggplot2::geom_point(data = outlier_df, ggplot2::aes(x = fits, y= standardized_residual)) + ggplot2::theme_bw()
+    ggplot2::geom_point(data = outlier_df, ggplot2::aes(x = fits, y= standardized_residual), shape = 21) +
+    ggplot2::theme_bw()
 
   p1<-p1 + ggplot2::stat_summary(fun.y=stats::median, colour="red", geom="line") +
     ggplot2::theme(plot.title = ggplot2::element_text(hjust = 0.5))
