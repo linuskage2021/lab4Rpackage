@@ -13,7 +13,7 @@ summary.linreg <- function(object, ...){
                              t_value = object[["beta"]] / object[["error_betas"]])
 
 
-  p_val <- (1 - pt(abs(placehold_df$t_value), df = object[["df"]]))*2
+  p_val <- (1 - stats::pt(abs(placehold_df$t_value), df = object[["df"]]))*2
   placehold_df$p_val <- p_val
   for(i in 1:nrow(placehold_df)){
     if (p_val[i] < 0.001){

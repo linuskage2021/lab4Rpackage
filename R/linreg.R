@@ -12,7 +12,7 @@
 linreg <- function(formula, data){
 
 
-  X <- model.matrix(formula, data = data)
+  X <- stats::model.matrix(formula, data = data)
   y <- as.matrix(data[,all.vars(formula)[1], drop = FALSE])
 
   qr_object <- base::qr(X)
