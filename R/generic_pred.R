@@ -1,11 +1,10 @@
 #' Creates generic function for pred
 #'
-#' @param x
+#' @param x blablab
 #'
-#' @return
+#' @return A generic function called pred
 #' @export
-#'
-#' @examples
+
 pred <- function(x){
 
   UseMethod("pred")

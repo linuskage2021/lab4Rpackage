@@ -7,11 +7,17 @@
 linreg(formula, data)
 }
 \arguments{
-\item{data}{}
+\item{formula}{A forumula describin the model}
+
+\item{data}{A data.frame containing the data}
 }
 \value{
-
+Returns a linear regression model
 }
 \description{
 Linear regression with QR
+}
+\examples{
+linreg(Sepal.Length ~ Species, data = iris)
+
 }

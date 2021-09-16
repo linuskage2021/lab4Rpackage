@@ -1,12 +1,14 @@
 
-#' Coefficeients of the estimated regression modell
+#' Coefficeients of the estimated regression model
 #'
-#' @param object
-#'
-#' @return
+#' @param object is a linreg object
+#' @param ... Extra stuff
+#' @return Returns the estimated coefficients of the fitted linear model
 #' @export
 #'
 #' @examples
+#' model <- linreg(Sepal.Length ~ Species, data = iris)
+#' coef(model)
 coef.linreg <- function(object, ...){
 
 

@@ -2,16 +2,22 @@
 % Please edit documentation in R/coef.R
 \name{coef.linreg}
 \alias{coef.linreg}
-\title{Coefficeients of the estimated regression modell}
+\title{Coefficeients of the estimated regression model}
 \usage{
 \method{coef}{linreg}(object, ...)
 }
 \arguments{
-\item{object}{}
+\item{object}{is a linreg object}
+
+\item{...}{Extra stuff}
 }
 \value{
-
+Returns the estimated coefficients of the fitted linear model
 }
 \description{
-Coefficeients of the estimated regression modell
+Coefficeients of the estimated regression model
+}
+\examples{
+model <- linreg(Sepal.Length ~ Species, data = iris)
+coef(model)
 }

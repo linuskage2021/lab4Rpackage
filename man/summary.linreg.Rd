@@ -2,16 +2,22 @@
 % Please edit documentation in R/summary.R
 \name{summary.linreg}
 \alias{summary.linreg}
-\title{Summary printout of the fitted regerssionmodel}
+\title{Summary printout of the fitted regression model}
 \usage{
 \method{summary}{linreg}(object, ...)
 }
 \arguments{
-\item{object}{}
+\item{object}{is a linreg object}
+
+\item{...}{Extra stuff}
 }
 \value{
-
+The function returns summary statistics about the fitted models
 }
 \description{
-Summary printout of the fitted regerssionmodel
+Summary printout of the fitted regression model
+}
+\examples{
+model <- linreg(Sepal.Length ~ Species, data = iris)
+summary(model)
 }

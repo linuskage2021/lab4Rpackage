@@ -1,11 +1,14 @@
 #' Print method for linreg classes
 #'
-#' @param x
+#' @param x is a linreg object
+#' @param ... extra stuff
 #'
-#' @return
+#' @return Returns the coefficients and the formula of the fitted model.
 #' @export
 #'
 #' @examples
+#' model <- linreg(Sepal.Length ~ Species, data = iris)
+#' print(model)
 print.linreg <- function(x, ...){
 
 

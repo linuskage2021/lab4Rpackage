@@ -7,11 +7,16 @@
 \method{pred}{linreg}(x)
 }
 \arguments{
-\item{object}{}
+\item{x}{is a linreg object}
 }
 \value{
-
+Returns the fitted values of the regression model on the training data
 }
 \description{
 Pred
+}
+\examples{
+model <- linreg(Sepal.Length ~ Species, data = iris)
+pred(model)
+
 }

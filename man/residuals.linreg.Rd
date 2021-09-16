@@ -7,11 +7,17 @@
 \method{residuals}{linreg}(object, ...)
 }
 \arguments{
-\item{object}{}
+\item{object}{is a linreg object}
+
+\item{...}{extra stuff}
 }
 \value{
-Vector with residuals
+The function returns a vector with residuals of the fitted model
 }
 \description{
 Residuals of a linereg class model
+}
+\examples{
+model <- linreg(Sepal.Length ~ Species, data = iris)
+resid(model)
 }

@@ -1,11 +1,13 @@
-#' Summary printout of the fitted regerssionmodel
+#' Summary printout of the fitted regression model
 #'
-#' @param object
-#'
-#' @return
+#' @param object is a linreg object
+#' @param ... Extra stuff
+#' @return The function returns summary statistics about the fitted models
 #' @export
 #'
 #' @examples
+#' model <- linreg(Sepal.Length ~ Species, data = iris)
+#' summary(model)
 summary.linreg <- function(object, ...){
 
   placehold_df <- data.frame(Estimate = object[["beta"]],

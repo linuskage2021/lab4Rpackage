@@ -7,10 +7,10 @@
 pred(x)
 }
 \arguments{
-\item{x}{}
+\item{x}{blablab}
 }
 \value{
-
+A generic function called pred
 }
 \description{
 Creates generic function for pred

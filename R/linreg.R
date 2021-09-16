@@ -1,14 +1,14 @@
-
-
 #' Linear regression with QR
 #'
-#' @param formula
-#' @param data
+#' @param formula A forumula describin the model
+#' @param data A data.frame containing the data
 #'
-#' @return
+#' @return Returns a linear regression model
 #' @export
 #'
 #' @examples
+#' linreg(Sepal.Length ~ Species, data = iris)
+#'
 linreg <- function(formula, data){
 
 

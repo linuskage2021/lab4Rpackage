@@ -7,11 +7,17 @@
 \method{print}{linreg}(x, ...)
 }
 \arguments{
-\item{x}{}
+\item{x}{is a linreg object}
+
+\item{...}{extra stuff}
 }
 \value{
-
+Returns the coefficients and the formula of the fitted model.
 }
 \description{
 Print method for linreg classes
+}
+\examples{
+model <- linreg(Sepal.Length ~ Species, data = iris)
+print(model)
 }

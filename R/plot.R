@@ -1,12 +1,14 @@
 #' Show two scatter plots.The first one fitted values against Residuals.
 #' The second scatter plot show square root of standardized residuals against fitted values
 #'
-#' @param object
-#'
-#' @return
+#' @param x is a linreg object
+#' @param ... extra stuff
+#' @return Produces two scatter plots, one for residuals against fitted values and standardized residuals against fits
 #' @export
 #'
 #' @examples
+#' model <- linreg(Sepal.Length ~ Species, data = iris)
+#' plot(model)
 plot.linreg = function(x, ...){
 
   data_package<-data.frame(fits=x[["fits"]],

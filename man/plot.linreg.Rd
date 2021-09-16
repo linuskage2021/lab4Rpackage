@@ -8,12 +8,18 @@ The second scatter plot show square root of standardized residuals against fitte
 \method{plot}{linreg}(x, ...)
 }
 \arguments{
-\item{object}{}
+\item{x}{is a linreg object}
+
+\item{...}{extra stuff}
 }
 \value{
-
+Produces two scatter plots, one for residuals against fitted values and standardized residuals against fits
 }
 \description{
 Show two scatter plots.The first one fitted values against Residuals.
 The second scatter plot show square root of standardized residuals against fitted values
+}
+\examples{
+model <- linreg(Sepal.Length ~ Species, data = iris)
+plot(model)
 }
