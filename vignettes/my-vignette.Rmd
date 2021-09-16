@@ -39,7 +39,7 @@ coef(obj)
 ```
 
 ### plot
-```{r , message=F, warning=F, fig.width=6, fig.height=4}
+```{r , message=F, warning=F}
 plot(obj)
 ```
 
