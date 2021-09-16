@@ -1,0 +1,59 @@
+---
+title: "my-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Importing the library:
+```{r setup}
+library(lab4Rpackage)
+```
+
+## Importing a sample dataset and Creating a linreg object
+
+```{r }
+data(iris)
+obj <- linreg(formula = Petal.Length~Species, data = iris)
+```
+
+## Methods
+
+### Print
+```{r }
+print(obj)
+```
+
+### coef
+```{r }
+coef(obj)
+```
+
+### plot
+```{r , message=F, warning=F, fig.width=6, fig.height=4}
+plot(obj)
+```
+
+### pred
+```{r }
+head(pred(obj),10)
+```
+
+### resid
+```{r }
+head(resid(obj))
+```
+
+### summary
+```{r }
+summary(obj)
+```
