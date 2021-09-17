@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 ## Importing the library:
 ```{r setup}
 library(lab4Rpackage)
+
 ```
 
 ## Importing a sample dataset and Creating a linreg object
