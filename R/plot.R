@@ -41,7 +41,7 @@ plot.linreg = function(x, ...){
     ggplot2::geom_point(shape=21) +
     ggplot2::ggtitle("Scale - Location") +
     ggplot2::xlab(paste("Fitted values \n lm(", x[["formula"]], ")", sep = ""))+
-    ggplot2::ylab("|Standaridized residuals|") +
+    ggplot2::ylab(expression(sqrt("|Standaridized residuals|"))) +
     ggplot2::geom_text(data = outlier_df, ggplot2::aes(x = fits, y = standardized_residual, label = rownames(outlier_df)), hjust = -0.4, vjust = 0) +
     ggplot2::geom_point(data = outlier_df, ggplot2::aes(x = fits, y= standardized_residual), shape = 21) +
     ggplot2::theme_bw()

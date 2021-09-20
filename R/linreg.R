@@ -11,6 +11,9 @@
 #'
 linreg <- function(formula, data){
 
+  if(!inherits(formula, "formula")) stop("Wrong input in formula")
+
+  if(!is.data.frame(data)) stop("Data is not a data.frame")
 
   X <- stats::model.matrix(formula, data = data)
   y <- as.matrix(data[,all.vars(formula)[1], drop = FALSE])

@@ -19,7 +19,9 @@ knitr::opts_chunk$set(
 library(lab4Rpackage)
 ```
 
-## Importing a sample dataset and Creating a linreg object
+## Fitting a model:
+
+In order to fit a model, use the `linereg()`. The function has two arguments: `formula` and `data`. The function `linereg()` returns a linreg object.
 
 ```{r }
 data(iris)
@@ -29,31 +31,49 @@ obj <- linreg(formula = Petal.Length~Species, data = iris)
 ## Methods
 
 ### Print
+
+`Print()` will return the function call as well as the estimated $\beta$-coefficients in the model.
+
 ```{r }
 print(obj)
 ```
 
 ### coef
+
+`coef()` will return $\beta$-coefficients in the model.
+
 ```{r }
 coef(obj)
 ```
 
 ### plot
+
+`plot()` returns two scatter plots. The first one shows the residual against fitted values. The second scatter plot shows square root of the absolute value of the standardized residuals against the fitted values.
+
 ```{r , message=F, warning=F}
 plot(obj)
 ```
 
 ### pred
+
+`pred()` returns the fitted values in the estimated model.
+
 ```{r }
 head(pred(obj),10)
 ```
 
 ### resid
+
+`resid()` returns the residuals in the estimated model.
+
 ```{r }
 head(resid(obj))
 ```
 
 ### summary
+
+`summary()` returns summary statistics about the estimated coefficient such as estimated parameters, the estimated standard error, t-value and p-value. It also returns the variance in the estimated model and the degree of freedom.
+
 ```{r }
 summary(obj)
 ```
