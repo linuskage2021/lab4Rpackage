@@ -24,8 +24,7 @@ linreg <- function(formula, data){
   R <- base::qr.R(qr_object)
 
 
-  beta_vec <- solve(R)%*%t(Q)%*%y
-
+  beta_vec <- solve(R, t(Q) %*% y)
 
   fitted_values <- X%*%beta_vec
 
